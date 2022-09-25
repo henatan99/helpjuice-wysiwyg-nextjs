@@ -1,0 +1,7 @@
+.interactive:hover {
+    cursor: pointer;
+}
+
+.interactive:hover * {
+    color: '#999999'; 
+}

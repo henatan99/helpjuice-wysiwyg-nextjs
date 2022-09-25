@@ -1,5 +1,5 @@
 import Image from "next/image"
-
+import styles from './styles.module.css'
 const left = [
     {id: 1, content: <Image src='/assets/P.png' width='23.7px' height='27.2px' alt='P' />, margin: '0.8rem'},
     {id: 2, content: "|", margin: '0.6rem',  fontSize: '11px'},
@@ -34,7 +34,18 @@ const ToolBar = () => {
                 {
                     left && left.map(elem => {
                         return (
-                            <span key={elem.id} style={{marginRight: elem.margin, fontSize: elem.fontSize, textAlign: 'center', color: '#9da3ae', display: 'flex'}}>{elem.content}</span>
+                            <span 
+                                key={elem.id} 
+                                className={![2, 4, 5, 7, 9].includes(elem.id) && styles.tool}
+                                style={{
+                                    marginRight: elem.margin, 
+                                    fontSize: elem.fontSize, 
+                                    textAlign: 'center', 
+                                    color: '#9da3ae', 
+                                    display: 'flex'}}
+                                >
+                                    {elem.content}
+                                </span>
                         )
                     })
                 }
@@ -43,7 +54,16 @@ const ToolBar = () => {
                 {
                     right && right.map(elem => {
                         return (
-                            <span key={elem.id} style={{marginRight: elem.margin, textAlign: 'center', color: '#9da3ae', display:'flex'}}>
+                            <span 
+                                key={elem.id}
+                                className={styles.tool}
+                                style={{
+                                    marginRight: elem.margin, 
+                                    textAlign: 'center', 
+                                    color: '#9da3ae', 
+                                    display:'flex'
+                                    }}
+                                >
                                 {elem.content}
                             </span>
                         )
