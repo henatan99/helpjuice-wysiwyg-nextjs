@@ -58,13 +58,23 @@ const Editor = () => {
           value={currentValue} 
           onChange={handleChange} 
           onKeyDown={handleKeyDown} 
+          focus
+          placeholder={currentPlaceholder}
           style={{
-            ...currentStyle
+            ...currentStyle,
+            padding: 0,
+            borderWidth: 0,
+            width: '101%',
+            maxWidth: 'unset',
+            color: '#636a76',
+            margin: '-1%',
+            paddingLeft: '1%',
+            outline: 'none'
           }}
         />
         {
           modalOpen && 
-          <div style={{position: 'absolute', bottom: -400}}>
+          <div style={{marginTop: '0.5rem'}}>
             <HeadingModal />
           </div>
         }
