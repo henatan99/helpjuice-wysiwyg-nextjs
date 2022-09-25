@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders editor unchanged 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ cHvIj"
+  >
+    <div
+      style="font-size: 1rem; margin-bottom: 1rem; line-height: 1.8rem; font-family: Arial, Helvetica, sans-serif; position: relative;"
+    />
+    <textarea
+      placeholder="Type / for blocks, @ to link docs or people"
+      rows="20"
+      style="padding: 0px 0px 0px 1%; border-width: 0px; width: 101%; max-width: unset; color: rgb(99, 106, 118); margin: -1%; outline: none; font-family: inherit;"
+    />
+  </div>
+</div>
+`;
