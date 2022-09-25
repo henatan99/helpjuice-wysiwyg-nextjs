@@ -1,4 +1,5 @@
 import Image from "next/image"
+import PropTypes from 'prop-types'
 
 const HeadingModal = (props) => {
 
@@ -27,9 +28,16 @@ const HeadingModal = (props) => {
                     paddingInlineStart: 0
                     }}
                 >
-                    <li onClick={handleClick} style={{display: 'flex', background: '#f3f4f6'}}>
+                    <li onClick={handleClick} 
+                        style={{
+                            display: 'flex', 
+                            background: '#f3f4f6',
+                            "&:hover": {
+                                cursor: 'pointer',
+                            },
+                        }}>
                         <div style={{position: 'relative', display: 'flex', marginRight: '0.8rem', padding: '0.8rem'}}>
-                            <Image src='/assets/T.svg' width='20px' height='30px'/>
+                            <Image src='/assets/T.svg' width='20px' height='30px' alt='T' />
                         </div>
                         <div style={{padding: '0rem'}}>
                             <h5 style={{marginBlockStart: '0.5rem', marginBlockEnd: 0, fontSize: '14px'}}>Heading 1</h5>
@@ -38,7 +46,7 @@ const HeadingModal = (props) => {
                     </li>
                     <li style={{display: 'flex'}}>
                         <div style={{position: 'relative', display: 'flex', marginRight: '0.8rem', padding: '0.8rem'}}>
-                            <Image src='/assets/T.svg' width='20px' height='30px'/>
+                            <Image src='/assets/T.svg' width='20px' height='30px' alt='T' />
                         </div>
                     <div style={{padding: '0rem'}}>
                             <h5 style={{marginBlockStart: '0.5rem', marginBlockEnd: 0, fontSize: '14px'}}>Expandable Heading 1</h5>
@@ -61,6 +69,10 @@ const HeadingModal = (props) => {
         </div>
         
     )
+}
+
+HeadingModal.propTypes = {
+    handleClick: PropTypes.func
 }
 
 export default HeadingModal

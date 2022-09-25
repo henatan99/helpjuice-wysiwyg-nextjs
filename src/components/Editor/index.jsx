@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import HeadingModal from "../HeadingModal"
 import { StyledContainer } from "./styles"
 
@@ -52,7 +53,7 @@ const Editor = () => {
     
     const handleKeyDown = event => {   
         if(event.target.value == '/1') {
-          setCurrentPlacholder(placholders[0])
+          setCurrentPlacholder(placholders[2])
           return
         }    
         if (event.key === 'Enter') {
@@ -79,10 +80,17 @@ const Editor = () => {
               <div 
                 key={block.id} 
                 style={{
-                    ...block.style
+                    ...block.style,
+                    position: 'relative'
                 }}
               >
                 {block.content}
+                {
+                  block.style.fontSize == '1.8rem' &&
+                  <div style={{ position: 'absolute', left: '-25px', top: '-5px', opacity: 0.3}}>
+                    <Image src='/assets/menu_icon.svg' width='15px' height='15px' alt='menu' />
+                  </div>
+                }
               </div>
             )
           })

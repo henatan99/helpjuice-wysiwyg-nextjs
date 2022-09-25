@@ -4,8 +4,8 @@ import { StyledHeaderContainer, StyledNavWrapper } from "./styles"
 const HeaderNav = () => {
 
     const left = [
-        {content: <Image src='/assets/right-arrow-double.svg' width='10px' height='9px' />, margin: '1.8rem', opacity: 0.4},
-        {content: <Image src='/assets/book.png' width='15px' height='12.2px'/>, margin: '0.6rem'},
+        {content: <Image src='/assets/right-arrow-double.svg' width='10px' height='9px' alt='right-arrow' />, margin: '1.8rem', opacity: 0.4},
+        {content: <Image src='/assets/book.png' width='15px' height='12.2px' alt='book'/>, margin: '0.6rem'},
         {content: "Main", margin: '0.7rem'},
         {content: "/", margin: '0.7rem', fontSize: '14px'},
         {content: "Getting Started", margin: '0.7rem'},
@@ -13,11 +13,11 @@ const HeaderNav = () => {
         {content: "Front-end developement test proje...", margin: '1rem'},
     ]
     const right = [
-        {content: <Image src='/assets/lock.png' width='15px' height='16.9px' />, margin: '0.8rem'},
+        {content: <Image src='/assets/lock.png' width='15px' height='16.9px' alt='lock' />, margin: '0.8rem'},
         {content: "Editing", margin: '1rem'},
         {content: "|", margin: '1rem' ,opacity: 0.6},
         {content: "Publish Space", margin: '1rem', color: '#3565a9', fontWeight: 700},
-        {content: <Image src='/assets/down_expand.svg' width='10px' height='10px' />},
+        {content: <Image src='/assets/down_expand.svg' width='10px' height='10px' alt='expand' />},
     ]
 
     return (
@@ -34,7 +34,17 @@ const HeaderNav = () => {
                 {
                     left && left.map(elem => {
                         return (
-                            <span key={elem.content} style={{marginRight: elem.margin, display: 'flex', fontSize: elem.fontSize || '14px', color: elem.color || '#969ba4', opacity: elem.opacity}}>{elem.content}</span>
+                            <span key={elem.content} style={{
+                                marginRight: elem.margin, 
+                                display: 'flex', 
+                                fontSize: elem.fontSize || '14px', 
+                                color: elem.color || '#969ba4', 
+                                opacity: elem.opacity,
+                                "&:hover": {
+                                    cursor: 'pointer',
+                                },
+                            }}
+                            >{elem.content}</span>
                         )
                     })
                 }
