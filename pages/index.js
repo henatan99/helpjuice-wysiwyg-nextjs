@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import HeaderNav from '../src/components/Header'
 import Main from '../src/components/Main'
 import styles from '../styles/Home.module.css'
@@ -17,7 +16,7 @@ export default function Home() {
         <header>
           <HeaderNav />
         </header>
-        <div style={{width: '100%', marginTop: '2rem'}}>
+        <div style={{width: '100%', marginTop: '0.6rem'}}>
           <Main />
         </div>
       </main>

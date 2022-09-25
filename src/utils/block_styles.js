@@ -3,5 +3,5 @@ export const h1Style = {
 }
 
 export const pStyle = {
-    fontSize: '1.5rem'
+    fontSize: '1rem'
 }

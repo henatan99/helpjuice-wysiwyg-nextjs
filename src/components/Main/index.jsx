@@ -11,9 +11,10 @@ const Main = () => {
                     <ToolBar />
                 </div>
                 <h1>
-                    Front-end Developer Test Project
+                    Front-end developer test project
                 </h1>
-                <p>
+                <hr></hr>
+                <p style={{color: '#636a76', lineHeight: '1.5rem', fontSize: '15px'}}>
                     Your goal is to make a page that looks exactly like this one, and has the ability to create 
                     H1 text simply by typing text, and hitting enter.
                 </p>
