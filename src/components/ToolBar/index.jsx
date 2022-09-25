@@ -28,7 +28,7 @@ const ToolBar = () => {
             border: '0.2px solid #e5e7eb',
             borderRadius: '0.3rem',
             textAlign: 'center',
-            // boxShadow: '1px 1px 1px 1px #888888'
+            boxShadow: '0 0.25px 0.89px 0.125px rgb(64 60 67 / 16%)'
         }}>
             <div style={{display: 'flex', alignItems: 'center'}}>
                 {

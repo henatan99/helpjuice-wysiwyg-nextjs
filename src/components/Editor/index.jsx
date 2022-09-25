@@ -1,9 +1,26 @@
 import { useState, useEffect } from "react"
 import HeadingModal from "../HeadingModal"
+import { StyledContainer } from "./styles"
 
 const Editor = () => {
+
+    const heading1 = {
+      fontSize: '1.8rem',
+      marginBottom: '1.6rem',
+      fontWeight: 'bold',
+      lineHeight: '2.5rem',
+      fontFamily: 'Arial, Helvetica, sans-serif'
+    }
+
+    const p = {
+      fontSize: '1rem',
+      marginBottom: '1rem',
+      lineHeight: '1.8rem',
+      fontFamily: 'Arial, Helvetica, sans-serif'
+    }
+
     let initBlocks = [
-        {id: 1, content: '', style: {fontSize: '1rem'}}
+        {id: 1, content: '', style: {...p}}
     ]
 
     const placholders = [
@@ -16,7 +33,7 @@ const Editor = () => {
     const [ currentValue, setCurrentValue ] = useState('');
     const [ currentStyle, setCurrentStyle ] = useState(initBlocks.style)
     const [ currentPlaceholder, setCurrentPlacholder ] = useState(placholders[0])
-    const [ modalOpen, setModalOpen ] = useState(true);
+    const [ modalOpen, setModalOpen ] = useState(false);
  
     useEffect(() => {
     }, []);
@@ -24,22 +41,38 @@ const Editor = () => {
     const handleChange = (e) => {
         setCurrentValue(e.target.value)
         if(e.target.value == '/1') {
-            setCurrentStyle({...currentStyle, fontSize: '2.5rem'})
-            setCurrentValue('')
+            setModalOpen(true)
+        }
+        if(currentValue == '/1') {
+          setCurrentStyle({...currentStyle, ...heading1 })
+          setModalOpen(false)
+          setCurrentValue('')
         }
     }
     
-    const handleKeyDown = event => {       
+    const handleKeyDown = event => {   
+        if(event.target.value == '/1') {
+          setCurrentPlacholder(placholders[0])
+          return
+        }    
         if (event.key === 'Enter') {
             blocks[blocks.length - 1] = {...blocks[blocks.length - 1], content: event.target.value, style: currentStyle}
             setBlocks([...blocks, {id: blocks.length, content: '', style: {...initBlocks[0].style}}])
             setCurrentValue('')
             setCurrentStyle({...initBlocks[0].style})
+            setCurrentPlacholder(placholders[1])
         }
     };
+
+    const handleModalClick = () => {
+      setModalOpen(false)
+      setCurrentStyle({...currentStyle, ...heading1})
+      setCurrentValue('')
+      setCurrentPlacholder(placholders[2])
+    }
     
     return (
-      <div style={{width: '100%', position: 'relative'}}>
+      <StyledContainer>
         {
           blocks && blocks.map(block => {
             return (
@@ -54,11 +87,12 @@ const Editor = () => {
             )
           })
         }
-        <input 
+        <textarea 
           value={currentValue} 
           onChange={handleChange} 
           onKeyDown={handleKeyDown} 
           focus
+          rows={!modalOpen && 20}
           placeholder={currentPlaceholder}
           style={{
             ...currentStyle,
@@ -69,16 +103,17 @@ const Editor = () => {
             color: '#636a76',
             margin: '-1%',
             paddingLeft: '1%',
-            outline: 'none'
+            outline: 'none',
+            fontFamily: 'inherit'
           }}
         />
         {
           modalOpen && 
           <div style={{marginTop: '0.5rem'}}>
-            <HeadingModal />
+            <HeadingModal handleClick={handleModalClick}/>
           </div>
         }
-      </div>
+      </StyledContainer>
     );
 }
 

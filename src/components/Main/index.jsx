@@ -18,7 +18,7 @@ const Main = () => {
                     Your goal is to make a page that looks exactly like this one, and has the ability to create 
                     H1 text simply by typing text, and hitting enter.
                 </p>
-                <div style={{width: '100%', marginTop: '3rem'}}>
+                <div style={{width: '100%', marginTop: '3.5rem'}}>
                     <Editor />
                 </div>
             </div>

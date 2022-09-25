@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { StyledHeaderContainer, StyledNavWrapper } from "./styles"
 
 const HeaderNav = () => {
 
@@ -20,30 +21,33 @@ const HeaderNav = () => {
     ]
 
     return (
-        <div style={{
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            alignItems: 'center',
-            padding: '1.3rem 1.5rem',
-        }}>
-            <div style={{display: 'flex'}}>
+        <div
+            style={{
+                display: 'flex',
+                flexSirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: '1.3rem 1.5rem'
+            }}
+         >
+            <StyledNavWrapper style={{display: 'flex'}}>
                 {
                     left && left.map(elem => {
                         return (
-                            <span style={{marginRight: elem.margin, display: 'flex', fontSize: elem.fontSize || '14px', color: elem.color || '#969ba4', opacity: elem.opacity}}>{elem.content}</span>
+                            <span key={elem.content} style={{marginRight: elem.margin, display: 'flex', fontSize: elem.fontSize || '14px', color: elem.color || '#969ba4', opacity: elem.opacity}}>{elem.content}</span>
                         )
                     })
                 }
-            </div>
-            <div style={{display: 'flex'}}>
+            </StyledNavWrapper>
+            <StyledNavWrapper style={{display: 'flex'}}>
                 {
                     right && right.map(elem => {
                         return (
-                            <span style={{marginRight: elem.margin, display: 'flex', fontSize: '14px', color: elem.color || '#969ba4', fontWieght: elem.fontWeight && elem.fontWeight, opacity: elem.opacity}}>{elem.content}</span>
+                            <span key={elem.content} style={{marginRight: elem.margin, display: 'flex', fontSize: '14px', color: elem.color || '#969ba4', fontWieght: elem.fontWeight && elem.fontWeight, opacity: elem.opacity}}>{elem.content}</span>
                         )
                     })
                 }
-            </div>
+            </StyledNavWrapper>
         </div>
     )
 }
