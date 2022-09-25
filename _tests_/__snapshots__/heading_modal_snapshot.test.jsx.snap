@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders headingModal unchanged 1`] = `
+<div>
+  <div
+    style="position: relative;"
+  >
+    <div
+      style="border: 1px solid #e5e7eb; min-height: 345px; width: 280px; border-radius: 0.3rem; z-index: 10;"
+    >
+      <div
+        style="padding: 0.4rem 0.6rem 0.3rem 0.6rem;"
+      >
+        <h4
+          style="margin-block-start: 0.3rem; margin-block-end: 0;"
+        >
+          Add blocks
+        </h4>
+        <p
+          style="color: rgb(157, 163, 174); margin-block-start: 0.5rem; font-size: 13px;"
+        >
+          keep typing to filter or escape to exit
+        </p>
+        <p
+          style="color: rgb(99, 106, 118); font-size: 13px;"
+        >
+          Filtering keyword 
+          <span
+            style="background: rgb(53, 101, 169); color: white; padding: 0.2rem; border-radius: 0.2rem; font-size: 13px;"
+          >
+            1
+          </span>
+        </p>
+      </div>
+      <ul
+        style="list-style: none; margin-block-start: 0; margin-block-end: 0; margin-inline-start: 0; margin-inline-end: 0; padding-inline-start: 0;"
+      >
+        <li
+          style="display: flex; background: rgb(243, 244, 246);"
+        >
+          <div
+            style="position: relative; display: flex; margin-right: 0.8rem; padding: 0.8rem;"
+          >
+            <span
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+            >
+              <span
+                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2720%27%20height=%2730%27/%3e"
+                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                />
+              </span>
+              <img
+                alt="T"
+                data-nimg="intrinsic"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </span>
+          </div>
+          <div
+            style="padding: 0rem;"
+          >
+            <h5
+              style="margin-block-start: 0.5rem; margin-block-end: 0; font-size: 14px;"
+            >
+              Heading 1
+            </h5>
+            <p
+              style="margin-block-start: 0.2rem; margin-block-end: 0; color: black; font-size: 14px;"
+            >
+              <small>
+                Shortcut, type # + space
+              </small>
+            </p>
+          </div>
+        </li>
+        <li
+          style="display: flex;"
+        >
+          <div
+            style="position: relative; display: flex; margin-right: 0.8rem; padding: 0.8rem;"
+          >
+            <span
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+            >
+              <span
+                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2720%27%20height=%2730%27/%3e"
+                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                />
+              </span>
+              <img
+                alt="T"
+                data-nimg="intrinsic"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </span>
+          </div>
+          <div
+            style="padding: 0rem;"
+          >
+            <h5
+              style="margin-block-start: 0.5rem; margin-block-end: 0; font-size: 14px;"
+            >
+              Expandable Heading 1
+            </h5>
+            <p
+              style="margin-block-start: 0.2rem; margin-block-end: 0; color: rgb(157, 163, 174); font-size: 14px;"
+            >
+              <small>
+                Shortcut, type &gt;&gt;# + space
+              </small>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      style="position: absolute; left: 0px; top: 0px; width: 280px; height: 100%; box-shadow: 0 30px 20px 10px; color: rgb(234, 234, 235); z-index: -50;"
+    />
+  </div>
+</div>
+`;

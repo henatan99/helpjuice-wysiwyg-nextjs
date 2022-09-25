@@ -1,8 +1,6 @@
 ## Getting Started
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-The app lets users to write in a text editor with wysiwyg approach. 
+A simple app with a few wysiwyg functionalities that lets users to write in a text editor, an attempt to mimic text editors. 
 
 There is a text input area where users can type their text. Initially it has empty content and has a default styling. When the user starts writing on it the app starts to save each input change on a local state and conditionally saves the input value.
 
@@ -44,6 +42,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+### Run unit tets locally with jest 
+- `npm run test` 
 
 ### Usage
 Either run the app in local server after setting it up or just go to the live demo and give it a try. 
