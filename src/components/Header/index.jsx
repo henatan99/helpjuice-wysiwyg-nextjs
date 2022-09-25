@@ -6,7 +6,7 @@ const HeaderNav = () => {
     const left = [
         {content: <Image src='/assets/right-arrow-double.svg' width='10px' height='9px' alt='right-arrow' />, margin: '1.8rem', opacity: 0.4},
         {content: <Image src='/assets/book.png' width='15px' height='12.2px' alt='book'/>, margin: '0.6rem'},
-        {content: "Main", margin: '0.7rem'},
+        {content: "Main", margin: '0.7rem', underlined: true},
         {content: "/", margin: '0.7rem', fontSize: '14px'},
         {content: "Getting Started", margin: '0.7rem'},
         {content: "/", margin: '0.7rem', fontSize: '14px'},
@@ -43,6 +43,7 @@ const HeaderNav = () => {
                                 "&:hover": {
                                     cursor: 'pointer',
                                 },
+                                textDecoration: elem.underlined && 'underline'
                             }}
                             >{elem.content}</span>
                         )

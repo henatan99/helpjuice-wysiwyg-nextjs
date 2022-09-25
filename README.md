@@ -14,6 +14,7 @@ There is a text input area where users can type their text. Initially it has emp
 
 - The default text has a predefined `p` style which represents a noremal paragraph text style. 
 
+[Live Demo Link](https://helpjuice-wysiwyg-nextjs-vercel.vercel.app/)
 
 ![Screenshot](docs/heading.gif)
 

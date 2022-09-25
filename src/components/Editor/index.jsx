@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import HeadingModal from "../HeadingModal"
 import { StyledContainer } from "./styles"
@@ -36,8 +36,10 @@ const Editor = () => {
     const [ currentPlaceholder, setCurrentPlacholder ] = useState(placholders[0])
     const [ modalOpen, setModalOpen ] = useState(false);
  
+    const focusInput = useRef()
     useEffect(() => {
-    }, []);
+      if(focusInput.current) focusInput.current.focus(); 
+    }, [focusInput]);
     
     const handleChange = (e) => {
         setCurrentValue(e.target.value)
@@ -86,7 +88,7 @@ const Editor = () => {
               >
                 {block.content}
                 {
-                  block.style.fontSize == '1.8rem' &&
+                  block.style && block.style.fontSize && block.style.fontSize == '1.8rem' &&
                   <div style={{ position: 'absolute', left: '-25px', top: '-5px', opacity: 0.3}}>
                     <Image src='/assets/menu_icon.svg' width='15px' height='15px' alt='menu' />
                   </div>
@@ -102,6 +104,7 @@ const Editor = () => {
           focus
           rows={!modalOpen && 20}
           placeholder={currentPlaceholder}
+          ref={focusInput}
           style={{
             ...currentStyle,
             padding: 0,
