@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import HeadingModal from "../HeadingModal"
 import { StyledContainer } from "./styles"
+import styles from './styles.module.css'
 
 const Editor = () => {
 
@@ -89,7 +90,15 @@ const Editor = () => {
                 {block.content}
                 {
                   block.style && block.style.fontSize && block.style.fontSize == '1.8rem' &&
-                  <div style={{ position: 'absolute', left: '-25px', top: '-5px', opacity: 0.3}}>
+                  <div 
+                    style={{ 
+                      position: 'absolute', 
+                      left: '-25px', 
+                      top: '-5px',
+                      opacity: 0.3
+                    }}
+                    className={styles.menu}
+                  >
                     <Image src='/assets/menu_icon.svg' width='15px' height='15px' alt='menu' />
                   </div>
                 }

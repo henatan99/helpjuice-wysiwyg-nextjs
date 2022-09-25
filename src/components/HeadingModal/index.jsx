@@ -1,5 +1,6 @@
 import Image from "next/image"
 import PropTypes from 'prop-types'
+import styles from './styles.module.css'
 
 const HeadingModal = (props) => {
 
@@ -32,10 +33,9 @@ const HeadingModal = (props) => {
                         style={{
                             display: 'flex', 
                             background: '#f3f4f6',
-                            "&:hover": {
-                                cursor: 'pointer',
-                            },
-                        }}>
+                        }}
+                        className={styles.interactive}
+                    >
                         <div style={{position: 'relative', display: 'flex', marginRight: '0.8rem', padding: '0.8rem'}}>
                             <Image src='/assets/T.svg' width='20px' height='30px' alt='T' />
                         </div>
@@ -44,11 +44,11 @@ const HeadingModal = (props) => {
                             <p style={{marginBlockStart: '0.2rem', marginBlockEnd: 0, color: '#9da3ae', fontSize: '14px', color: 'black'}}><small>Shortcut, type # + space</small></p>
                         </div>
                     </li>
-                    <li style={{display: 'flex'}}>
+                    <li style={{display: 'flex'}} className={styles.interactive}>
                         <div style={{position: 'relative', display: 'flex', marginRight: '0.8rem', padding: '0.8rem'}}>
                             <Image src='/assets/T.svg' width='20px' height='30px' alt='T' />
                         </div>
-                    <div style={{padding: '0rem'}}>
+                        <div style={{padding: '0rem'}}>
                             <h5 style={{marginBlockStart: '0.5rem', marginBlockEnd: 0, fontSize: '14px'}}>Expandable Heading 1</h5>
                             <p style={{marginBlockStart: '0.2rem', marginBlockEnd: 0, color: '#9da3ae', fontSize: '14px'}}><small>Shortcut, type &gt;&gt;# + space</small></p>
                         </div>
