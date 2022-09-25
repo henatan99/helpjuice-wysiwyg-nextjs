@@ -14,7 +14,7 @@ There is a text input area where users can type their text. Initially it has emp
 
 - The default text has a predefined `p` style which represents a noremal paragraph text style. 
 
-[Live Demo Link](https://helpjuice-wysiwyg-nextjs-vercel.vercel.app/)
+[Live Demo Link](https://helpjuice-wysiwyg-nextjs-vercel-e85ow73we-henatan99.vercel.app/)
 
 ![Screenshot](docs/heading.gif)
 
@@ -73,9 +73,3 @@ Give a :star:️ if you like this project!
 ## :memo: License
 
 This project is [MIT](./LICENSE) licensed.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
